@@ -14,7 +14,7 @@ def numb():
 def lett():
     for let in letters:
         print(let)
-        time.sleep(1)
+        time.sleep(0.999)
 
 
 number = Thread(target=numb)
@@ -22,3 +22,6 @@ letter = Thread(target=lett)
 
 number.start()
 letter.start()
+
+number.join()
+letter.join()
